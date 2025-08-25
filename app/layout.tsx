@@ -31,6 +31,7 @@ export default function RootLayout({
         className={`${jaldi.variable} ${jersey.variable} antialiased`}
       >
         <header className="content-grid">
+          <Navbar></Navbar>
         </header>
         {children}
       </body>
