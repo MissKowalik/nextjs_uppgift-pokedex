@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Searchbar from "@/components/Searchbar";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
             alt="Dice"
           />
           Random Pokémon</button>
+      </section>
+      <section className="flex justify-center p-10">
+        <Searchbar></Searchbar>
       </section>
     </main>
   );
