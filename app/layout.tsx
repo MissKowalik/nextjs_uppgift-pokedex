@@ -31,11 +31,12 @@ export default function RootLayout({
       <body
         className={`${jaldi.variable} ${jersey.variable} antialiased`}
       >
-        <header className="content-grid">
-          <Navbar></Navbar>
-        </header>
+
+        <Navbar/>
+
         {children}
-        <Footer></Footer>
+        
+        <Footer/>
       </body>
     </html>
   );

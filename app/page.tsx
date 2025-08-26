@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Searchbar from "@/components/SearchForm";
 import PokeCard from "@/components/PokeCard";
 import getRandomPokemons from "@/components/RandomPokemons";
+import SearchForm from "@/components/SearchForm";
 
 export default async function Home() {
   const pokemons = await getRandomPokemons(4);
@@ -22,10 +22,8 @@ export default async function Home() {
           Random Pokémon</button>
       </section>
 
-      {/* Search */}
-      <section className="flex justify-center p-10">
-        <Searchbar/>
-      </section>
+      {/* Searchform component */}
+      <SearchForm/>
 
       {/* Featured */}
       <section className="flex flex-col items-center bg-indigo-100">
