@@ -3,7 +3,7 @@ import { Pokemon } from "@/lib/interfaces/Pokemon";
 
 export default function PokeCard( {pokemon}: {pokemon: Pokemon} ) {
     return (
-        <div className="flex flex-col items-center bg-indigo-50 border-indigo-500 border-4 rounded-lg w-50 pt-6 pb-2 mb-16">
+        <div className="flex flex-col items-center bg-indigo-50 border-indigo-500 border-4 rounded-lg w-50 pt-6 pb-2">
             <Image 
                 src={pokemon.image}
                 alt={`Picture of ${pokemon.name}`}
