@@ -1,6 +1,6 @@
 import { PokeType } from "@/lib/types/PokeType";
 
-type PokemonListItem = { name: string; url: string };
+export type PokemonListItem = { name: string; url: string };
 
 export async function searchPokemon(query: string) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=2000`);

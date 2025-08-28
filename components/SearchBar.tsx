@@ -28,7 +28,7 @@ export default function SearchBar() {
     
     return (
         <section className="flex flex-col items-center p-10">
-            <div className="flex items-align justify-between w-2/5 shadow-md/25  rounded-md p-3 ">
+            <div className="flex items-align justify-between w-150 shadow-md/25  rounded-md p-3">
 
                 {/* Controlled input element: its value is 'query' and updates on each keystroke */}
                 <input 
