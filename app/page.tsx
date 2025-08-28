@@ -1,5 +1,5 @@
 import Hero from "@/components/HeroHome";
-import SearchForm from "@/components/SearchForm";
+import SearchBar from "@/components/SearchBar";
 import FeaturedPokemons from "@/components/FeaturedPokemons";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero/>
 
       {/* Searchform component */}
-      <SearchForm/>
+      <SearchBar/>
 
       {/* Featured */}
       <FeaturedPokemons/>
