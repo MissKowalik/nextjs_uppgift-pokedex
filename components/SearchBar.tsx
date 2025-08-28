@@ -36,7 +36,7 @@ export default function SearchBar() {
                     value={query} // Showing current state value in the input
                     onChange={(e) => setQuery(e.target.value)} // Update state as user types
                     placeholder="Search for a Pokémon..." 
-                    className="w-full"/>
+                    className="w-full focus:outline-none"/>
                 <div className="bg-indigo-400 rounded-md px-1">
                     <Image
                         src="/Search.svg"
@@ -52,10 +52,10 @@ export default function SearchBar() {
             {query.trim().length > 0 && (   // only show when the trimmed query has content
                 <section className="flex flex-col items-center pb-16">
                     <h2 className="text-3xl p-10">Search result for {query}</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="flex justify-center gap-6">
                         {pokemons.length > 0 ? (
                         pokemons.slice(0,4).map(pokemon => (  // only show 4 results by slicing array
-                            <PokeCard key={pokemon.id} pokemon={pokemon} />
+                            <PokeCard key={pokemon.id} pokemon={pokemon}/>
                         ))
                         ) : ( // if no result show "no results" message
                         <p>No results found.</p>
