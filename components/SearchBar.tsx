@@ -49,18 +49,20 @@ export default function SearchBar() {
             </div>
 
             {/* Search results */}
-            <section className="flex flex-col items-center pb-16">
-                <h2 className="text-3xl p-10">Search result for {query}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {pokemons.length > 0 ? (
-                    pokemons.map(pokemon => (
-                        <PokeCard key={pokemon.id} pokemon={pokemon} />
-                    ))
-                    ) : (
-                    <p>No results found.</p>
-                    )}
-                </div>
-            </section>
+            {query.trim().length > 0 && (   // only show when the trimmed query has content
+                <section className="flex flex-col items-center pb-16">
+                    <h2 className="text-3xl p-10">Search result for {query}</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {pokemons.length > 0 ? (
+                        pokemons.map(pokemon => (
+                            <PokeCard key={pokemon.id} pokemon={pokemon} />
+                        ))
+                        ) : ( // if no result show "no results" message
+                        <p>No results found.</p>
+                        )}
+                    </div>
+                </section>
+            )}
         </section>
     )
 }
