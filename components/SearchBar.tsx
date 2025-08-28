@@ -54,7 +54,7 @@ export default function SearchBar() {
                     <h2 className="text-3xl p-10">Search result for {query}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {pokemons.length > 0 ? (
-                        pokemons.map(pokemon => (
+                        pokemons.slice(0,4).map(pokemon => (  // only show 4 results by slicing array
                             <PokeCard key={pokemon.id} pokemon={pokemon} />
                         ))
                         ) : ( // if no result show "no results" message
