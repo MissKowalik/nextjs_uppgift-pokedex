@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import PokeCard from './PokeCard';
+import PokeCard from '../PokeCard';
 import { searchPokemon } from './SearchPokemon';
 import { useState, useEffect } from 'react';
 import { Pokemon } from '@/lib/interfaces/Pokemon';

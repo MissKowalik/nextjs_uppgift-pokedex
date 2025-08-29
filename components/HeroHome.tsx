@@ -10,6 +10,6 @@ export default function Hero() {
             {/* Button that fetches a random Pokémon when clicked */}
             <RandomButton/>
             
-            </section>
+        </section>
     );
 }

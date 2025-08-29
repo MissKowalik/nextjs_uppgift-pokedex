@@ -3,7 +3,7 @@ import { PokeType } from "@/lib/types/PokeType";
 export type PokemonListItem = { name: string; url: string };
 
 export async function searchPokemon(query: string) {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=2000`);
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=1000`);
   const data = await response.json();
 
   // Filter by substring match

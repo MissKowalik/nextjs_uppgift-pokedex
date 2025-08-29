@@ -1,5 +1,5 @@
 import Hero from "@/components/HeroHome";
-import SearchBar from "@/components/SearchBar";
+import SearchBar from "@/components/Search/SearchBar";
 import FeaturedPokemons from "@/components/FeaturedPokemons";
 
 export default function Home() {

@@ -1,5 +1,5 @@
 import { PokeType } from "../types/PokeType";
-import { PokemonListItem } from "@/components/SearchPokemon";
+import { PokemonListItem } from "@/components/Search/SearchPokemon";
 import { Pokemon } from "../interfaces/Pokemon";
 
 
