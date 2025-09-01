@@ -24,8 +24,8 @@ export async function pokeProps(id: number) {
 }
 
 
-export async function getAllPokemons(): Promise<Pokemon[]> {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon`);
+export async function getAllPokemons(limit = 15, skip = 0): Promise<Pokemon[]> {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${skip}&limit=${limit}`);
   const data = await res.json();
 
   const results = await Promise.all(
