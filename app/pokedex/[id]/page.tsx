@@ -10,9 +10,11 @@ export default async function PokemonDetailPage({
 }) {
     const {id} = await params;
 
-    const pokemon: Pokemon = await getPokemonById(id);
+    const pokemon: Pokemon | undefined = await getPokemonById(id);
 
-    if (!pokemon.id) return notFound();
+    // Check if the pokemon object exists and has an id property.
+    // If it doesn't, this means the Pokemon wasn't found, so show 404 page using Next.js
+    if (!pokemon?.id) return notFound();
 
     return (
         <section className="flex flex-col items-center pb-12 bg-gradient-to-br [background-image:linear-gradient(-10deg,_#C97FE4,_#AECDF6)]">

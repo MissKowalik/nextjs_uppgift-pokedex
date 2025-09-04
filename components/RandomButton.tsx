@@ -16,7 +16,11 @@ export default function RandomButton() {
     // Function that fetches one random Pokémon and saves it to state
     async function showRandomPokemon() {
         const pokemons = await getRandomPokemons(1);  // getRandomPokemons(1) asks for 1 Pokémon -> returns an array with one item.
-        setRandomPokemon(pokemons[0]);  // Take the first Pokémon from the array and store it in randomPokemon state.
+        if (pokemons[0]) {
+            setRandomPokemon(pokemons[0]); // Take the first Pokémon from the array and store it in randomPokemon state.
+        } else {
+            setRandomPokemon(null);
+        }
     }
 
     return (
